@@ -1,11 +1,9 @@
 const FEATURED_REPOS = [
   "BuildAi",
   "ai-land-inspection",
-  "proposaliq ",
-  "tomide-portfolio",
   "scrubunit",
-  
-
+  "tomide-portfolio",
+  "proposaliq",
 ];
 
 export async function getRepos() {
@@ -13,7 +11,7 @@ export async function getRepos() {
     "https://api.github.com/users/codepro233/repos",
     {
       next: {
-        revalidate: 3600, // 1 hour
+        revalidate: 3600,
       },
     }
   );
