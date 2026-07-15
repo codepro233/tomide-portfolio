@@ -1,30 +1,29 @@
-export default function Stats() {
+import { getRepos } from "../lib/github";
+
+export default async function Stats() {
+  const repos = await getRepos();
 
   const stats = [
     {
-      value: "20+",
-      title: "Projects",
+      value: "5",
+      title: "Live Projects",
     },
-
     {
-      value: "5+",
-      title: "AI Apps",
+      value: "2024",
+      title: "Building Since",
     },
-
     {
-      value: "100%",
-      title: "Responsive",
+      value: `${repos.length}`,
+      title: "Public Repos",
     },
-
     {
-      value: "24/7",
-      title: "Learning",
+      value: "3",
+      title: "AI-Powered Apps",
     },
   ];
 
   return (
     <section className="py-32">
-
       <div
         className="
         max-w-6xl
@@ -55,13 +54,10 @@ export default function Stats() {
               {item.value}
             </h3>
 
-            <p className="mt-4">
-              {item.title}
-            </p>
+            <p className="mt-4">{item.title}</p>
           </div>
         ))}
       </div>
-
     </section>
   );
 }
