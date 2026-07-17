@@ -7,7 +7,9 @@ export const projects = [
     description:
       "AI-powered proposal generator for African freelancers. Generate, share, and manage client proposals with built-in payments.",
     liveUrl: "https://proposaliq-five.vercel.app",
+    githubUrl: "https://github.com/codepro233/proposaliq",
     tech: ["Next.js", "MongoDB", "OpenRouter", "Paystack"],
+    featured: true,
     caseStudy: {
       problem:
         "African freelancers lose contracts by sending generic, slow-turnaround proposals that don't match client expectations.",
@@ -25,7 +27,9 @@ export const projects = [
     description:
       "Analyze land coordinates and generate AI-powered inspection reports with PDF export.",
     liveUrl: "https://ai-land-inspection.vercel.app/",
+    githubUrl: "https://github.com/codepro233/ai-land-inspection",
     tech: ["Next.js", "Leaflet", "OpenRouter"],
+    featured: true,
     caseStudy: {
       problem:
         "Land buyers in Nigeria can't easily verify a plot's condition remotely before committing to a purchase, leading to costly mistakes.",
@@ -43,7 +47,9 @@ export const projects = [
     description:
       "Track construction projects with AI insights and Nigerian Naira/USD currency toggle.",
     liveUrl: "https://build-ai-one.vercel.app",
+    githubUrl: "https://github.com/codepro233/BuildAi",
     tech: ["Next.js", "Supabase", "OpenRouter"],
+    featured: true,
     caseStudy: {
       problem:
         "Construction project managers track costs and progress across spreadsheets and WhatsApp threads, leading to budget overruns and missed deadlines.",
@@ -56,21 +62,21 @@ export const projects = [
   {
     slug: "scrub-unit-booking",
     title: "Scrub Unit Booking",
-    category: "Booking Platform",
+    category: "Dashboard",
     image: "/images/scrub.jpeg",
     description:
       "Booking platform for a cleaning business in Ado-Ekiti, Nigeria, with admin dashboard for managing jobs, customers, and scheduling.",
-      liveUrl: "https://codepro233.github.io/scrubunit/",
-    tech: ["HTML", "CSS", "JavaScript"], // update if the real stack differs
-    caseStudy: {  
-    problem:
-      "The Scrub Unit, a cleaning business in Ado-Ekiti, managed all bookings manually over WhatsApp — no calendar, no admin overview, no way to scale.",
-    solution:
-      "A booking platform with a full admin dashboard so the business can manage jobs, customers, and scheduling end-to-end.",
-    
-    impact:
-      "Built for a real operating business I run — not a tutorial clone. Live and in use today.",
+    liveUrl: "https://codepro233.github.io/scrubunit/",
+    githubUrl: "https://github.com/codepro233/scrubunit",
+    tech: ["HTML", "CSS", "JavaScript"],
+    featured: false,
+    caseStudy: {
+      problem:
+        "The Scrub Unit, a cleaning business in Ado-Ekiti, managed all bookings manually over WhatsApp — no calendar, no admin overview, no way to scale.",
+      solution:
+        "A booking platform with a full admin dashboard so the business can manage jobs, customers, and scheduling end-to-end.",
+      impact:
+        "Built for a real operating business I run — not a tutorial clone. Live and in use today.",
     },
-    
   },
 ];

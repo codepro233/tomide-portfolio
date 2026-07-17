@@ -1,14 +1,48 @@
 import LenisProvider from "../providers/LenisProvider";
 import "./globals.css";
- import BackgroundParticles from "../components/BackgroundParticles"
+import BackgroundParticles from "../components/BackgroundParticles"
 import Cursor from "../components/Cursor";
 import { Analytics } from "@vercel/analytics/react";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Loader from "@/components/Loader";
 
+
 export const metadata = {
-  title: "Abere Oluwatomide | Full Stack Developer",
-  description: "Modern 3D Portfolio built with Next.js and Three.js.",
+  title: "Abere Oluwatomide | Full-Stack Developer & AI Engineer",
+  description:
+    "Full-stack developer building production-ready AI SaaS products with Next.js, TypeScript, and AI. View live projects including ProposalIQ, BuildAI, and AI Land Inspection.",
+  keywords: [
+    "Abere Oluwatomide",
+    "Full Stack Developer",
+    "AI Engineer",
+    "Next.js Developer",
+    "TypeScript",
+    "Remote Developer Nigeria",
+  ],
+  openGraph: {
+    title: "Abere Oluwatomide | Full-Stack Developer & AI Engineer",
+    description:
+      "Full-stack developer building production-ready AI SaaS products with Next.js, TypeScript, and AI.",
+    url: "https://tomide-dev.vercel.app",
+    siteName: "Tomide.dev",
+    images: [
+      {
+        url: "/myimage.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Abere Oluwatomide - Full Stack Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abere Oluwatomide | Full-Stack Developer & AI Engineer",
+    description:
+      "Full-stack developer building production-ready AI SaaS products with Next.js, TypeScript, and AI.",
+    images: ["/myimage.jpeg"],
+  },
 };
 
 export default function RootLayout({
@@ -20,13 +54,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider> 
-        <BackgroundParticles />
-        <Cursor />
-    
-         <LenisProvider>
-          {children}
-         </LenisProvider> 
-         </ThemeProvider>
+          <BackgroundParticles />
+          <Cursor />
+          <LenisProvider>
+            {children}
+          </LenisProvider> 
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

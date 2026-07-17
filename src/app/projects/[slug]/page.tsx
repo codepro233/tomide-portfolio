@@ -16,7 +16,7 @@ export default async function ProjectDetailPage({ params }: Params) {
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-20">
-      <Link href="/" className="text-sm text-muted hover:text-cyan-400 transition-colors">
+      <Link href="/#projects" className="text-sm text-muted hover:text-cyan-400 transition-colors">
         ← Back to projects
       </Link>
 

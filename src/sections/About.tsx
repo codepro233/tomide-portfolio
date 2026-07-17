@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import FlipCard from "@/components/FlipCard";
-import ProfileCard from "@/components/ProfileCard";
 
 export default function About() {
   return (
@@ -18,17 +17,14 @@ export default function About() {
             About Me
           </h2>
           <p className="text-muted leading-8 text-lg">
-            I'm a passionate Full Stack Developer and AI enthusiast dedicated to
-            building modern web applications and intelligent systems that solve
-            real-world problems. I enjoy creating beautiful and scalable software
-            using Next.js, React, TypeScript, Three.js, and AI technologies. My
-            goal is to combine exceptional user experiences with powerful
-            functionality to create products that make a difference.
+            I&apos;m a self-taught Full-Stack Developer who ships production-ready
+            AI SaaS products end to end — from architecture to deployment.
+            My four live projects (ProposalIQ, BuildAI, AI Land Inspection,
+            and Scrub Unit Booking) handle real users, real payments, and
+            real business problems, built with Next.js, TypeScript, and
+            modern AI APIs. I care about fast iteration, clean code, and
+            interfaces that feel as good as they function.
           </p>
-        </div>
-
-        <div className="flex justify-center mb-20">
-          <ProfileCard />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">

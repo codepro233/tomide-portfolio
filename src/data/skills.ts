@@ -1,49 +1,16 @@
-  
-   
-   
-   export const skills = [
-  {
-    name: "Next.js",
-    icon: "▲",
-  },
+export const skills = [
+  // Frontend
+  { name: "Next.js", icon: "▲", category: "Frontend" },
+  { name: "React", icon: "⚛️", category: "Frontend" },
+  { name: "TypeScript", icon: "TS", category: "Frontend" },
+  { name: "Three.js", icon: "🎲", category: "Frontend" },
+  { name: "Tailwind", icon: "🌊", category: "Frontend" },
 
-  {
-    name: "React",
-    icon: "⚛️",
-  },
+  // Backend
+  { name: "Node.js", icon: "🟢", category: "Backend" },
+  { name: "Prisma", icon: "△", category: "Backend" },
+  { name: "PostgreSQL", icon: "🐘", category: "Backend" },
 
-  {
-    name: "TypeScript",
-    icon: "TS",
-  },
-
-  {
-    name: "Node.js",
-    icon: "🟢",
-  },
-
-  {
-    name: "Prisma",
-    icon: "△",
-  },
-
-  {
-    name: "PostgreSQL",
-    icon: "🐘",
-  },
-
-  {
-    name: "OpenAI",
-    icon: "🤖",
-  },
-
-  {
-    name: "Three.js",
-    icon: "🎲",
-  },
-
-  {
-    name: "Tailwind",
-    icon: "🌊",
-  },
+  // AI / ML
+  { name: "OpenAI", icon: "🤖", category: "AI / ML" },
 ];
