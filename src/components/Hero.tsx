@@ -114,7 +114,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE"
+                href="https://www.linkedin.com/in/abere-oluwatomide-5b046a416?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:text-cyan-400 transition-colors"
