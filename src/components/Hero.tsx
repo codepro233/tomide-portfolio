@@ -19,7 +19,10 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="flex justify-center"
         >
-          <div className="card w-full max-w-xl rounded-3xl p-8 md:p-10 flex flex-col items-center text-center">
+          <div
+            className="card w-full max-w-xl rounded-3xl p-8 md:p-10 flex flex-col items-center text-center"
+            style={{ containerType: "inline-size" }}
+          >
 
             {/* Profile Image */}
             <div className="relative">
@@ -35,13 +38,36 @@ export default function Hero() {
             </div>
 
             {/* Name */}
-            <h1 className="mt-8 text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
-              <span className="block" style={{ color: "var(--fg)" }}>
+            <h1 className="mt-8 font-extrabold leading-tight tracking-tight w-full">
+              <span className="block text-4xl sm:text-5xl" style={{ color: "var(--fg)" }}>
                 Abere
               </span>
-              <span className="block bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
-                Oluwatomide
-              </span>
+              <svg
+                viewBox="0 0 420 90"
+                className="w-full mt-2"
+                style={{ maxHeight: "90px" }}
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <defs>
+                  <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#22d3ee" />
+                    <stop offset="50%" stopColor="#38bdf8" />
+                    <stop offset="100%" stopColor="#3b82f6" />
+                  </linearGradient>
+                </defs>
+                <text
+                  x="0"
+                  y="68"
+                  fontFamily="var(--font-syne), sans-serif"
+                  fontWeight="800"
+                  fontSize="70"
+                  fill="url(#nameGradient)"
+                  textLength="420"
+                  lengthAdjust="spacingAndGlyphs"
+                >
+                  Oluwatomide
+                </text>
+              </svg>
             </h1>
 
             {/* Role / Headline */}
@@ -91,7 +117,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/in/abere-oluwatomide-5b046a416"
+                href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:text-cyan-400 transition-colors"

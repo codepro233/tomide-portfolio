@@ -1,3 +1,4 @@
+import { Syne, DM_Mono } from "next/font/google";
 import LenisProvider from "../providers/LenisProvider";
 import "./globals.css";
 import BackgroundParticles from "../components/BackgroundParticles"
@@ -6,6 +7,19 @@ import { Analytics } from "@vercel/analytics/react";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Loader from "@/components/Loader";
 
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-dm-mono",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Abere Oluwatomide | Full-Stack Developer & AI Engineer",
@@ -51,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${syne.variable} ${dmMono.variable}`}>
       <body>
         <ThemeProvider> 
           <BackgroundParticles />
