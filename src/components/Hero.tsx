@@ -45,7 +45,6 @@ export default function Hero() {
               <svg
                 viewBox="0 0 420 90"
                 className="w-full mt-2"
-                style={{ maxHeight: "90px" }}
                 preserveAspectRatio="xMidYMid meet"
               >
                 <defs>
