@@ -10,11 +10,12 @@ export default function Projects() {
   const categories = ["All", "AI", "Dashboard", "Automation"];
 
   const featuredProjects = projects.filter((p) => p.featured);
+  const otherProjects = projects.filter((p) => !p.featured);
 
   const filtered =
     category === "All"
-      ? projects
-      : projects.filter((project) => project.category === category);
+      ? otherProjects
+      : otherProjects.filter((project) => project.category === category);
 
   return (
     <section id="projects" className="py-32 px-6">
@@ -37,38 +38,40 @@ export default function Projects() {
           </div>
         )}
 
-        {/* ALL PROJECTS */}
-        <h3 className="text-lg font-semibold text-center text-muted uppercase tracking-wide mb-8">
-          All Projects
-        </h3>
+        {/* OTHER PROJECTS — only shows if there are non-featured ones left */}
+        {otherProjects.length > 0 && (
+          <>
+            <h3 className="text-lg font-semibold text-center text-muted uppercase tracking-wide mb-8">
+              Other Projects
+            </h3>
 
-        {/* FILTER BUTTONS */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((item) => (
-            <button
-              key={item}
-              onClick={() => setCategory(item)}
-              className={`
-                px-5
-                py-3
-                rounded-full
-                border
-                border-white/20
-                transition-colors
-                ${category === item ? "bg-cyan-500 text-white" : "bg-white/10"}
-              `}
-            >
-              {item}
-            </button>
-          ))}
-        </div>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {categories.map((item) => (
+                <button
+                  key={item}
+                  onClick={() => setCategory(item)}
+                  className={`
+                    px-5
+                    py-3
+                    rounded-full
+                    border
+                    border-white/20
+                    transition-colors
+                    ${category === item ? "bg-cyan-500 text-white" : "bg-white/10"}
+                  `}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
 
-        {/* PROJECT GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {filtered.map((project) => (
-            <ProjectCard key={project.slug} {...project} />
-          ))}
-        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {filtered.map((project) => (
+                <ProjectCard key={project.slug} {...project} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
