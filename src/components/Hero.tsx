@@ -4,10 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+import { useRef, useEffect } from "react";
 import Scene3D from "./Scene3D";
 import ResumeButton from "./ResumeButton";
 
 export default function Hero() {
+  const nameRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const el = nameRef.current;
+    if (!el) return;
+    const parent = el.parentElement;
+    if (!parent) return;
+    let size = 72;
+    el.style.fontSize = size + "px";
+    el.style.whiteSpace = "nowrap";
+    while (el.scrollWidth > parent.clientWidth && size > 24) {
+      size -= 1;
+      el.style.fontSize = size + "px";
+    }
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-32 pb-16 sm:pt-36 sm:pb-20">
       <div className="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
@@ -42,31 +59,12 @@ export default function Hero() {
               <span className="block text-4xl sm:text-5xl" style={{ color: "var(--fg)" }}>
                 Abere
               </span>
-              <svg
-                viewBox="0 0 420 90"
-                className="w-full mt-2"
-                preserveAspectRatio="xMidYMid meet"
+              <span
+                ref={nameRef}
+                className="block bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent"
               >
-                <defs>
-                  <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#22d3ee" />
-                    <stop offset="50%" stopColor="#38bdf8" />
-                    <stop offset="100%" stopColor="#3b82f6" />
-                  </linearGradient>
-                </defs>
-                <text
-                  x="0"
-                  y="68"
-                  fontFamily="var(--font-syne), sans-serif"
-                  fontWeight="800"
-                  fontSize="70"
-                  fill="url(#nameGradient)"
-                  textLength="420"
-                  lengthAdjust="spacingAndGlyphs"
-                >
-                  Oluwatomide
-                </text>
-              </svg>
+                Oluwatomide
+              </span>
             </h1>
 
             {/* Role / Headline */}
